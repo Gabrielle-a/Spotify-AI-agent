@@ -34,8 +34,7 @@ L’agent utilise le modèle Mistral pour analyser l’émotion détectée dans 
 - Python
 - Telegram Bot API
 - Spotify Web API
-- Mistral (LLM)
-- API REST
+- Mistral (LLM) 
 
 ---
 
