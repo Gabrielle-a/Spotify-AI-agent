@@ -1,92 +1,66 @@
 # Spotify-AI-agent
-📌 Description
+
+## 📌 Description
 
 AI Spotify Mood Playlist Agent est un agent d’intelligence artificielle permettant de générer automatiquement des playlists Spotify personnalisées à partir des émotions exprimées par un utilisateur via Telegram.
 
-L’agent utilise un modèle de langage Mistral pour analyser l’émotion (nostalgie, tristesse, joie, etc.) contenue dans la requête utilisateur, puis interroge l’API Spotify afin de créer une playlist adaptée aux préférences et à l’humeur détectée.
+L’agent utilise le modèle Mistral pour analyser l’émotion détectée dans le message (nostalgie, tristesse, joie, etc.), puis interroge l’API Spotify afin de créer une playlist adaptée à l’humeur et aux préférences de l’utilisateur.
 
-🚀 Fonctionnalités
+---
 
-💬 Interaction en temps réel via Telegram
+## 🚀 Fonctionnalités
 
-🧠 Analyse des émotions grâce au modèle Mistral
+- Interaction en temps réel via Telegram
+- Analyse des émotions avec Mistral (LLM)
+- Génération automatique de playlists Spotify
+- Intégration de l’API Spotify
+- Recommandation basée sur l’humeur et les préférences utilisateur
+- Retour automatique du lien de la playlist
 
-🎵 Génération automatique de playlists personnalisées
+---
 
-🔗 Intégration de l’API Spotify
+## 🏗️ Architecture
 
-🎯 Recommandations basées sur :
+1. L’utilisateur envoie un message via Telegram.
+2. Le message est analysé par Mistral pour détecter l’émotion dominante.
+3. L’API Spotify est interrogée avec des critères adaptés à l’émotion.
+4. Une playlist personnalisée est générée.
+5. Le lien Spotify est renvoyé à l’utilisateur.
 
-L’émotion détectée
+---
 
-Les préférences musicales utilisateur
+## 🛠️ Technologies utilisées
 
-⚡ Création et retour automatique du lien Spotify
+- Python
+- Telegram Bot API
+- Spotify Web API
+- Mistral (LLM)
+- API REST
 
-🏗️ Architecture
+---
 
-L’utilisateur envoie un message via Telegram.
-
-Le message est transmis au modèle Mistral pour analyse sémantique.
-
-L’émotion dominante est identifiée.
-
-L’API Spotify est interrogée en fonction des critères émotionnels.
-
-Une playlist est générée dynamiquement.
-
-Le lien Spotify est renvoyé à l’utilisateur.
-
-🛠️ Technologies utilisées
-
-Python
-
-Telegram Bot API
-
-Spotify Web API
-
-Mistral (LLM) pour l’analyse NLP
-
-API REST
-
-🎯 Exemple
+## 🎯 Exemple d’utilisation
 
 Utilisateur :
-
-"Je suis un peu triste ce soir, j’aimerais quelque chose de doux."
+"Je me sens nostalgique aujourd’hui."
 
 Processus :
+- Analyse émotionnelle → Nostalgie
+- Génération d’une playlist adaptée
+- Envoi du lien Spotify
 
-Analyse via Mistral → émotion détectée : tristesse
+---
 
-Requête Spotify adaptée (tempo, énergie, valence)
+## 🔐 Configuration
 
-Création playlist
+Créer un fichier `.env` ou configurer les variables d’environnement :
 
-Envoi du lien à l’utilisateur
+SPOTIFY_CLIENT_ID=your_client_id  
+SPOTIFY_CLIENT_SECRET=your_client_secret  
+TELEGRAM_BOT_TOKEN=your_bot_token  
+MISTRAL_API_KEY=your_mistral_api_key  
 
-🔐 Configuration
+Lancer le projet :
 
-Variables d’environnement nécessaires :
-
-SPOTIFY_CLIENT_ID=your_client_id
-SPOTIFY_CLIENT_SECRET=your_client_secret
-TELEGRAM_BOT_TOKEN=your_bot_token
-MISTRAL_API_KEY=your_mistral_api_key
-
-
-Lancement :
-
+```bash
 python main.py
-
-📈 Améliorations futures
-
-Classification émotionnelle multi-label
-
-Personnalisation avancée via historique d’écoute
-
-Système de feedback utilisateur
-
-Déploiement cloud
-
-Fine-tuning du modèle émotionnel
