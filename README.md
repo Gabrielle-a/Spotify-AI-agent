@@ -169,9 +169,7 @@ spotify_test/
 
 This project is for personal/educational use.
 
-## Contributing
 
-Feel free to fork and modify for your own use!
 
 
 
